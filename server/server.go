@@ -1,6 +1,6 @@
 package server
 
-import "github.com/basic/account-service/config"
+import "github.com/hendrorahmat/account-service/config"
 
 func Init() {
 	config := config.GetConfig()

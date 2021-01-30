@@ -1,8 +1,9 @@
-module github.com/basic/account-service
+module github.com/hendrorahmat/account-service
 
-go 1.14
+go 1.13
 
 require (
+	github.com/hendrorahmat/account-service/routes v0.1.2
 	github.com/aws/aws-sdk-go v1.37.1
 	github.com/gin-gonic/gin v1.6.3
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect

@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/basic/account-service/models"
 	"github.com/gin-gonic/gin"
+	"github.com/hendrorahmat/account-service/models"
 	"net/http"
 )
 

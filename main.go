@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/basic/account-service/config"
-	"github.com/basic/account-service/server"
+	"github.com/hendrorahmat/account-service/config"
+	"github.com/hendrorahmat/account-service/server"
 )
 
 func main() {

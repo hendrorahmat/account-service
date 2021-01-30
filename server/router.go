@@ -1,8 +1,8 @@
 package server
 
 import (
-	"github.com/basic/account-service/controllers"
 	"github.com/gin-gonic/gin"
+	"github.com/hendrorahmat/account-service/controllers"
 )
 
 func NewRouter() *gin.Engine {
@@ -13,7 +13,6 @@ func NewRouter() *gin.Engine {
 	health := new(controllers.HealthController)
 
 	router.GET("/health", health.Status)
-	Routing
 	// router.Use(middlewares.AuthMiddleware())
 	// RouterV1(router)
 	// v1 := router.Group("v1")

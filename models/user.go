@@ -8,8 +8,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
-	"github.com/basic/account-service/db"
-	"github.com/basic/account-service/forms"
+	"github.com/hendrorahmat/account-service/db"
+	"github.com/hendrorahmat/account-service/forms"
 	uuid "github.com/satori/go.uuid"
 )
 

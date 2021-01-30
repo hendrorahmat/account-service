@@ -3,9 +3,9 @@ package tests
 import (
 	"testing"
 
-	"github.com/basic/account-service/config"
-	"github.com/basic/account-service/controllers"
 	"github.com/gin-gonic/gin"
+	"github.com/hendrorahmat/account-service/config"
+	"github.com/hendrorahmat/account-service/controllers"
 	"github.com/spf13/viper"
 )
 
