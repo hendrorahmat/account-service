@@ -1,25 +1,36 @@
 package db
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"github.com/vsouza/go-gin-boilerplate/config"
+	"fmt"
+	"log"
+
+	"github.com/vsouza/go-gin-boilerplate/database"
+	"gorm.io/gorm"
 )
 
-var db *dynamodb.DynamoDB
+var DB *gorm.DB
 
 func Init() {
-	c := config.GetConfig()
-	db = dynamodb.New(session.New(&aws.Config{
-		Region:      aws.String(c.GetString("db.region")),
-		Credentials: credentials.NewEnvCredentials(),
-		Endpoint:    aws.String(c.GetString("db.endpoint")),
-		DisableSSL:  aws.Bool(c.GetBool("db.disable_ssl")),
-	}))
+	db, err := database.ConnectToDB()
+
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	// ping to database
+	_, errorPing := db.DB()
+	// fmt.Println(statusPing)
+	fmt.Println(errorPing)
+	// err = db.DB().Ping()
+
+	// error ping to database
+	if errorPing != nil {
+		log.Fatalln(errorPing)
+	}
+
+	DB = db
 }
 
-func GetDB() *dynamodb.DynamoDB {
-	return db
+func getDatabase() *gorm.DB {
+	return DB
 }

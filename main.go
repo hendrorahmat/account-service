@@ -6,7 +6,6 @@ import (
 	"os"
 
 	"github.com/vsouza/go-gin-boilerplate/config"
-	"github.com/vsouza/go-gin-boilerplate/db"
 	"github.com/vsouza/go-gin-boilerplate/server"
 )
 
@@ -18,6 +17,6 @@ func main() {
 	}
 	flag.Parse()
 	config.Init(*environment)
-	db.Init()
+	// db.Init()
 	server.Init()
 }

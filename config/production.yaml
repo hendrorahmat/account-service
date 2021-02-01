@@ -1,0 +1,10 @@
+server:
+  port: 0.0.0.0:8009
+database:
+  connections : 
+    default :
+      driver: postgres
+      host: 127.0.0.1
+      username: root
+      password:
+      db_name: account_service

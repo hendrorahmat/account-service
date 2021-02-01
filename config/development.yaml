@@ -1,2 +1,12 @@
+timezone: UTC
 server:
   port: 0.0.0.0:8009
+database:
+  connections: 
+    default:
+      driver: postgres
+      db: "account_service"
+      host: 127.0.0.1
+      username: macintosh
+      password: root
+      port: 5432
