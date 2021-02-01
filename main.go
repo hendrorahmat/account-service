@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hendrorahmat/account-service/config"
-	"github.com/hendrorahmat/account-service/server"
+	"github.com/vsouza/go-gin-boilerplate/config"
+	"github.com/vsouza/go-gin-boilerplate/db"
+	"github.com/vsouza/go-gin-boilerplate/server"
 )
 
 func main() {
@@ -17,6 +18,6 @@ func main() {
 	}
 	flag.Parse()
 	config.Init(*environment)
-	// db.Init()
+	db.Init()
 	server.Init()
 }

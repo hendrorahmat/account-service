@@ -5,7 +5,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"github.com/hendrorahmat/account-service/config"
+	"github.com/vsouza/go-gin-boilerplate/config"
 )
 
 var db *dynamodb.DynamoDB

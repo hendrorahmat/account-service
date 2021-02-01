@@ -1,2 +1,2 @@
-server: 
-  port: 0.0.0.0:9003
+server:
+  port: 0.0.0.0:8009
